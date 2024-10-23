@@ -1,0 +1,41 @@
+<header class="header">
+    <div class="container">
+        <h1 class="logo">حكاية {{story.title}}</h1>
+        <nav class="navigation text-center">
+            <a routerLink="" class="text-white">العودة للصفحة الرئسية</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container single-story-page mt-4">
+    <div class="row">
+        <div class="col-lg-8 video-section">
+            <div class="video-wrapper mb-4">
+                <iframe width="100%" height="315" [src]="'https://www.youtube.com/embed/' + videoKey | safeUrl"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="story-description">
+                <h2>القصة</h2>
+                <p>{{story.text}}</p>
+            </div>
+        </div>
+
+        <aside class="col-lg-4 sidebar">
+            <h3 class="mb-4 mt-2">قصص أخرى</h3>
+            <div *ngFor="let relatedStory of stories" class="related-stories">
+                <div class="story-item d-flex align-items-center mb-3">
+                    <img [src]="'assets/images/story' + (stories.indexOf(relatedStory) + 1) + '.jpeg'"
+                        alt="{{relatedStory.title}}" onerror="this.onerror=null;this.src='assets/images/not-found.jpg';"
+                        class="img-thumbnail">
+                    <div class="story-info ml-2">
+                        <p class="m-0">{{relatedStory.title}}</p>
+                        <small class="text-muted">{{relatedStory.date | date:'longDate':'UTC':'ar'}}</small> <!-- Display date in Arabic -->
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
