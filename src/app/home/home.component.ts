@@ -8,6 +8,7 @@ import { StoriesService } from '../services/stories.service';
 })
 export class HomeComponent {
   stories: any[] = [];
+  loading: boolean = true;
 
   constructor(private storiesService: StoriesService) { }
 
@@ -18,6 +19,7 @@ export class HomeComponent {
   fetchStories(): void {
     this.storiesService.getStories().subscribe(data => {
       this.stories = data;
+      this.loading = false;
     });
   }
 }

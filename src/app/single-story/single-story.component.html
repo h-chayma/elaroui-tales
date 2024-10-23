@@ -1,9 +1,10 @@
-<header class="header">
-    <div class="container">
-        <h1 class="logo">حكاية {{story.title}}</h1>
-        <nav class="navigation text-center">
-            <a routerLink="" class="text-white">العودة للصفحة الرئسية</a>
-        </nav>
+<header class="header position-relative bg-dark text-white">
+    <div class="overlay position-absolute w-100 h-100 bg-dark bg-opacity-50"></div>
+    <div class="container position-relative text-center py-5">
+        <h1 class="display-4 mt-4">حكاية {{story.title}}</h1>
+        <div class="navigation pt-2">
+            <a routerLink="" class="btn btn-outline-light">العودة للصفحة الرئسية</a>
+        </div>
     </div>
 </header>
 
@@ -32,7 +33,8 @@
                         class="img-thumbnail">
                     <div class="story-info ml-2">
                         <p class="m-0">{{relatedStory.title}}</p>
-                        <small class="text-muted">{{relatedStory.date | date:'longDate':'UTC':'ar'}}</small> <!-- Display date in Arabic -->
+                        <small class="text-muted">{{relatedStory.date | date:'longDate':'UTC':'ar'}}</small>
+                        <!-- Display date in Arabic -->
                     </div>
                 </div>
             </div>

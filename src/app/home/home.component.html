@@ -2,7 +2,11 @@
     <img src="assets/images/banner.png" alt="Banner" class="banner-image">
 </div>
 
-<div class="story-grid">
+<div class="loading" *ngIf="loading">
+    <div class="spinner"></div>
+</div>
+
+<div class="story-grid" *ngIf="!loading">
     <div class="story-card" *ngFor="let story of stories; let index = index">
         <a [routerLink]="['/story', story.id]" class="image-container">
             <img [src]="'assets/images/story' + (index + 1) + '.jpeg'" alt="{{story.title}}"

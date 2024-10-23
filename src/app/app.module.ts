@@ -12,6 +12,7 @@ import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import localeAr from '@angular/common/locales/ar'; 
 import { registerLocaleData } from '@angular/common';
 import { StoriesComponent } from './stories/stories.component';
+import { AboutComponent } from './about/about.component';
 
 registerLocaleData(localeAr);
 
@@ -23,7 +24,8 @@ registerLocaleData(localeAr);
     HomeComponent,
     SingleStoryComponent,
     SafeUrlPipe,
-    StoriesComponent
+    StoriesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

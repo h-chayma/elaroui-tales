@@ -1,1 +1,15 @@
-<p>stories works!</p>
+<div class="loading" *ngIf="loading">
+    <div class="spinner"></div>
+</div>
+
+<div class="story-grid" *ngIf="!loading">
+    <div class="story-card" *ngFor="let story of stories; let index = index">
+        <a [routerLink]="['/story', story.id]" class="image-container">
+            <img [src]="'assets/images/story' + (index + 1) + '.jpeg'" alt="{{story.title}}"
+                onerror="this.onerror=null;this.src='assets/images/not-found.jpg';" class="story-image">
+            <div class="overlay">
+                <h3>{{story.title}}</h3>
+            </div>
+        </a>
+    </div>
+</div>
