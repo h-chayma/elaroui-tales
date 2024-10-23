@@ -1,0 +1,14 @@
+.bg-body-tertiary {
+    background-color: #e8e0ca !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item:hover {
+    color: #8a332f !important;
+    font-weight: 600 !important;
+}
+
+.nav-item .active {
+    color: #8a332f !important;
+    font-weight: 800 !important;
+}

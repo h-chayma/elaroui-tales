@@ -1,0 +1,15 @@
+<div class="banner">
+    <img src="assets/images/banner.png" alt="Banner" class="banner-image">
+</div>
+
+<div class="story-grid">
+    <div class="story-card" *ngFor="let story of stories; let index = index">
+        <div class="image-container">
+            <img [src]="'assets/images/story' + (index + 1) + '.jpeg'" alt="{{story.title}}"
+                onerror="this.onerror=null;this.src='assets/images/not-found.jpg';" class="story-image">
+            <div class="overlay">
+                <h3>{{story.title}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    direction: rtl;
+    text-align: right;
+    font-family: "Cairo", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #e8e0ca;
+}
