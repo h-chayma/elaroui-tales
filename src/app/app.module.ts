@@ -11,6 +11,7 @@ import { SingleStoryComponent } from './single-story/single-story.component';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import localeAr from '@angular/common/locales/ar'; 
 import { registerLocaleData } from '@angular/common';
+import { StoriesComponent } from './stories/stories.component';
 
 registerLocaleData(localeAr);
 
@@ -21,7 +22,8 @@ registerLocaleData(localeAr);
     FooterComponent,
     HomeComponent,
     SingleStoryComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    StoriesComponent
   ],
   imports: [
     BrowserModule,

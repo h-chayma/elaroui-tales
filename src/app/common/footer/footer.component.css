@@ -2,3 +2,8 @@
 .footer {
     background-color: #e8e0ca !important;
 }
+
+a {
+    text-decoration: none;
+    color: #8a332f;
+}

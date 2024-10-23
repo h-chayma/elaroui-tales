@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'elaroui-tales';
+
+  isLoading = true;
+
+  constructor() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
+  }
 }
