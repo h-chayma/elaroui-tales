@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './single-story.component.css'
 })
 export class SingleStoryComponent {
-  story: any;
+  storyDetails: any;
   videoKey: string | undefined;
   stories: any[] = [];
 
@@ -22,8 +22,8 @@ export class SingleStoryComponent {
 
   getStoryDetails(id: number) {
     this.storiesService.getStoryById(id).subscribe((data: any) => {
-      this.story = data;
-      this.videoKey = data.youtube;
+      this.storyDetails = data;
+      this.videoKey = data.youtubeId;
     }, error => {
       console.error('Error fetching story details:', error);
     });
